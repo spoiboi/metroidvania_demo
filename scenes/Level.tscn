@@ -1,0 +1,161 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl74kqsaxmhp"]
+
+[ext_resource type="PackedScene" path="res://scenes/Platform.tscn" id="1_platform"]
+[ext_resource type="PackedScene" uid="uid://bpq7frmxcwq0" path="res://scenes/Powerup.tscn" id="2_powerup"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Background" type="Polygon2D" parent="."]
+z_index = -10
+position = Vector2(1600, 100)
+color = Color(0.1, 0.12, 0.22, 1)
+polygon = PackedVector2Array(-1900, -800, 1900, -800, 1900, 800, -1900, 800)
+
+[node name="Platforms" type="Node2D" parent="."]
+
+[node name="GroundZone1" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(350, 580)
+size = Vector2(1100, 40)
+color = Color(0.35, 0.28, 0.2, 1)
+
+[node name="WallLeft" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(-160, 580)
+size = Vector2(40, 600)
+color = Color(0.45, 0.38, 0.3, 1)
+
+[node name="StepA" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(310, 510)
+size = Vector2(120, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="StepB" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(440, 440)
+size = Vector2(120, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="StepB2" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(809, 232)
+size = Vector2(120, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="IntroFloat" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(580, 380)
+size = Vector2(140, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="DoubleJumpPerch" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(680, 290)
+size = Vector2(120, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="GroundZone2" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(1050, 580)
+size = Vector2(600, 40)
+color = Color(0.35, 0.28, 0.2, 1)
+
+[node name="HighPlatA" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(930, 440)
+size = Vector2(100, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="HighPlatB" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(1080, 340)
+size = Vector2(100, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="HighPlatC" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(1220, 260)
+size = Vector2(100, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="CeilingBlock" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(1350, 160)
+size = Vector2(600, 20)
+color = Color(0.45, 0.38, 0.3, 1)
+
+[node name="DashPerch" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(1380, 260)
+size = Vector2(140, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="DropA" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(1480, 360)
+size = Vector2(100, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="DropB" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(1560, 460)
+size = Vector2(100, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="TakeoffLedge" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(1660, 580)
+size = Vector2(220, 40)
+color = Color(0.35, 0.28, 0.2, 1)
+
+[node name="LandingLedge" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(2180, 580)
+size = Vector2(400, 40)
+color = Color(0.35, 0.28, 0.2, 1)
+
+[node name="HopDashA" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(2400, 460)
+size = Vector2(120, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="HopDashB" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(2580, 350)
+size = Vector2(120, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="HopDashC" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(2750, 270)
+size = Vector2(120, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="HopDashC2" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(3046, 270)
+size = Vector2(120, 20)
+color = Color(0.3, 0.55, 0.3, 1)
+
+[node name="FinalGround" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(2950, 580)
+size = Vector2(500, 40)
+color = Color(0.35, 0.28, 0.2, 1)
+
+[node name="WallRight" parent="Platforms" instance=ExtResource("1_platform")]
+position = Vector2(3643, 390)
+size = Vector2(40, 600)
+color = Color(0.45, 0.38, 0.3, 1)
+
+[node name="Powerups" type="Node2D" parent="."]
+position = Vector2(237, -156)
+
+[node name="DoubleJumpPowerup" parent="Powerups" instance=ExtResource("2_powerup")]
+position = Vector2(680, 255)
+
+[node name="DashPowerup" parent="Powerups" instance=ExtResource("2_powerup")]
+position = Vector2(1380, 225)
+powerup_type = "dash"
+
+[node name="Goal" type="Node2D" parent="."]
+position = Vector2(3100, 480)
+
+[node name="Diamond" type="Polygon2D" parent="Goal"]
+color = Color(1, 0.85, 0.1, 1)
+polygon = PackedVector2Array(0, -50, 30, 0, 0, 50, -30, 0)
+
+[node name="Pole" type="Polygon2D" parent="Goal"]
+position = Vector2(0, 50)
+color = Color(0.7, 0.7, 0.7, 1)
+polygon = PackedVector2Array(-4, 0, 4, 0, 4, 52, -4, 52)
+
+[node name="GoalLabel" type="Label" parent="Goal"]
+offset_left = -50.0
+offset_top = -80.0
+offset_right = 50.0
+offset_bottom = -57.0
+theme_override_colors/font_color = Color(1, 0.9, 0.2, 1)
+theme_override_font_sizes/font_size = 14
+text = "★  GOAL  ★"
+horizontal_alignment = 1

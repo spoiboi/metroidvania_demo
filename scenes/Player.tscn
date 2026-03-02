@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdrk2xm8p1fv"]
+
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_player"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(32, 56)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="BodyPolygon" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-16, -28, 16, -28, 16, 28, -16, 28)
+color = Color(0.25, 0.55, 0.95, 1)
+
+[node name="EyeLeft" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(-9, -18, -4, -18, -4, -12, -9, -12)
+color = Color(1, 1, 1, 1)
+
+[node name="EyeRight" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(4, -18, 9, -18, 9, -12, 4, -12)
+color = Color(1, 1, 1, 1)
+
+[node name="DashIndicator" type="Polygon2D" parent="."]
+visible = false
+position = Vector2(13, -23)
+polygon = PackedVector2Array(0, -6, 6, 0, 0, 6, -6, 0)
+color = Color(1.0, 0.55, 0.1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = -1000
+limit_right = 10000
+limit_top = -2000
+limit_bottom = 2000
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
